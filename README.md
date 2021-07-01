@@ -1,8 +1,14 @@
-# anomalydetectplatform
+# Anomaly Detection Platform
 Platform for anomaly detection and monitoring
 
 ### Start Jupyter
 
-    cd jupyter  
-    docker build -t garyb/anomalydetect .
-    docker run -p 8080:8080 -v ${pwd}:/src garyb/anomalydetect
+    make jupyter_build
+    make jupyter_run
+
+
+### Start Web Service
+
+    make service_run
+
+http://127.0.0.1:8000/docs
