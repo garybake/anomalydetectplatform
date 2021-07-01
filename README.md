@@ -12,3 +12,35 @@ Platform for anomaly detection and monitoring
     make service_run
 
 http://127.0.0.1:8000/docs
+
+Predict vector
+
+    curl -X 'POST' \
+        'http://localhost:8000/prediction' \
+        -H 'accept: application/json' \
+        -H 'Content-Type: application/json' \
+        -d '{
+        "feature_vector": [
+            1.2, 3.4
+        ],
+        "score": false
+    }'
+
+Predict vector with scoring
+
+    curl -X 'POST' \
+        'http://localhost:8000/prediction' \
+        -H 'accept: application/json' \
+        -H 'Content-Type: application/json' \
+        -d '{
+        "feature_vector": [
+            31.2, 32.4
+        ],
+        "score": true
+    }'
+
+Get model parameters
+
+    curl -X 'GET' \
+        'http://localhost:8000/model_information' \
+        -H 'accept: application/json'
