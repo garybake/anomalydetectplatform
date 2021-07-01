@@ -1,0 +1,20 @@
+version: '3'
+
+volumes: 
+    prometheus_data: {}
+    grafana_data: {}
+
+services:
+    prometheus:
+        image: prom/prometheus:v2.20.0
+        container_name: prometheus
+        volumes: 
+            - ./prometheus:/etc/prometheus
+            - prometheus_data:/prometheus
+        command:
+            - '--config.file=/etc/prometheus/prometheus.yml'
+            - '--storage.tsdb.path=/prometheus'
+            - '--storage.tsdb.retention.time=48h'
+        restart: unless-stopped
+        expose:
+            - "9090"
