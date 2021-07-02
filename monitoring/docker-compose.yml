@@ -32,5 +32,18 @@ services:
         restart: unless-stopped
         expose:
             - "3000"
+
+    caddy:
+        image: stefanprodan/caddy
+        container_name: caddy
+        volumes: 
+            - ./caddy:/etc/caddy
+        environment:
+            - ADMIN_USER=${ADMIN_USER}
+            - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+        restart: unless-stopped
         ports:
             - "3000:3000"
+            - "9090:9090"
+
+             
