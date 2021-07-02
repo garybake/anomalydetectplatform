@@ -44,3 +44,14 @@ Get model parameters
     curl -X 'GET' \
         'http://localhost:8000/model_information' \
         -H 'accept: application/json'
+
+### Monitoring Service
+
+
+    cd monitoring
+    docker-compose up -d
+
+
+Prometheus - Monitoring system  
+Grafana - Analytics dashboard  
+Caddy - Reverse proxy for basic auth  
