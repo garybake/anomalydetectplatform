@@ -1,7 +1,7 @@
 # Anomaly Detection Platform
 Platform for anomaly detection and monitoring  
 
-![Alt text](docs/AnomalyDetectionDashboard.png?raw=true "dashboard")
+![Alt text](docs/AnomalyDetectionDashboard2.png?raw=true "dashboard")
 
 ### Start Jupyter
 
