@@ -10,6 +10,7 @@ Platform for anomaly detection and monitoring
 ### Start Web Service
 
     make service_run
+    make service_run_local
 
 http://127.0.0.1:8000/docs
 
@@ -53,5 +54,9 @@ Get model parameters
 
 
 Prometheus - Monitoring system  
+http://127.0.0.1:9090/graph
+
 Grafana - Analytics dashboard  
+http://127.0.0.1:3000/login
+
 Caddy - Reverse proxy for basic auth  
